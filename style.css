@@ -1,0 +1,162 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(77, 24, 45);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  margin-top: 200px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+  width: 100%; /* Ensure it takes the available width */
+}
+
+.stat_container {
+  padding: 30px;
+  border-radius: 20px;
+  border: 2px solid;
+  display: flex;
+  gap: 50px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+#number {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(229, 135, 180);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#progress_bar {
+  width: 100%;
+  height: 10px;
+  background-color: rgb(191, 100, 144);
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+#progress {
+  width: 0%;
+  height: 10px;
+  background-color: rgb(141, 22, 79);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.details {
+  width: 100%;
+}
+
+form {
+  margin-top: 60px;
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  background: rgb(237, 146, 190);
+  border: 1px solid rgb(141, 22, 79);
+  border-radius: 10px;
+  outline: none;
+}
+
+button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(141, 21, 79);
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  outline: none;
+}
+
+/* Custom class for the trash icon */
+.trash-icon {
+  color: #8f0d0d; /* Dark pink color */
+  font-size: 30px; /* Size of the trash icon */
+  cursor: pointer;
+}
+
+/* Custom class for the edit icon */
+.edit-icon {
+  color: rgb(255, 255, 255); /* White color */
+  font-size: 24px; /* Size of the edit icon */
+  cursor: pointer;
+}
+
+/* Task item container */
+.taskItem {
+  width: 500px;
+  display: flex;
+  background-color: rgb(213, 123, 176);
+  padding: 10px;
+  border-radius: 10px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px; /* Adds space between tasks */
+  margin-top: 20px;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.task input {
+  width: 20px;
+  height: 20px;
+}
+
+.task p {
+  margin: 0;
+  font-size: 18px;
+}
+
+.icons {
+  display: flex;
+  gap: 10px;
+}
+
+/* Remove default list styles */
+ul,
+ol {
+  list-style: none; /* Remove default list styles */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+li {
+  text-decoration: none; /* Remove text decoration */
+}
+
+/* Add this rule to change the color of the text when the task is completed */
+.task.completed p {
+  color: rgb(83, 14, 14); /* or any color you prefer */
+  text-decoration: line-through; /* Optional: adds a strikethrough */
+}
