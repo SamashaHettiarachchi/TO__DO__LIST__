@@ -117,22 +117,25 @@ const blaskConfetti = () => {
     decay: 0.94,
     startVelocity: 30,
     shapes: ["star"], // Default shape
-    colors: ["#3498db", "#2980b9", "#1f618d", "#5dade2", "#85c1e9"], // Blue shades
+    colors: ["#3498db", "#2980b9", "#1f618d", "#5dade2", "#85c1e9"], // Blue shades for circles
   };
 
   function shoot() {
+    // Yellow stars
     confetti({
       ...defaults,
       particleCount: 40,
       scalar: 1.2,
-      shapes: ["star"], // Stars will use the blue colors
+      shapes: ["star"], // Stars will use yellow colors
+      colors: ["#f1c40f", "#f39c12"], // Yellow shades
     });
 
+    // Blue circles
     confetti({
       ...defaults,
       particleCount: 10,
       scalar: 0.75,
-      shapes: ["circle"], // Circles will use blue colors as well
+      shapes: ["circle"], // Circles will use blue colors
     });
   }
 

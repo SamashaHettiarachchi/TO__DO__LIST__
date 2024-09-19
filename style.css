@@ -6,18 +6,18 @@
 }
 
 body {
-  color: rgb(137, 9, 50);
+  color: rgb(250, 248, 250);
   display: flex;
   justify-content: center;
   align-items: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("https://plus.unsplash.com/premium_photo-1683309563562-aa3cfde9ed10?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-image: url("StockCake-Elegant\ Writing\ Essentials_1726762084.jpg");
 }
 
 .container {
   display: flex;
-  margin-top: 300px;
+  margin-top: 200px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -28,29 +28,30 @@ body {
 .stat_container {
   padding: 30px;
   border-radius: 20px;
-  border: 2px solid;
+  border: 6px solid black;
   display: flex;
   gap: 50px;
   width: 100%;
   justify-content: space-between;
 }
 
-#number {
+#numbers {
   width: 100px;
   height: 100px;
-  background-color: rgb(229, 135, 180);
+  background-color: rgb(85, 81, 83);
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   font-size: 30px;
   font-weight: bold;
+  color: black;
 }
 
 #progress_bar {
   width: 100%;
   height: 10px;
-  background-color: rgb(191, 100, 144);
+  background-color: rgb(126, 119, 122);
   border-radius: 5px;
   margin-top: 20px;
 }
@@ -58,13 +59,15 @@ body {
 #progress {
   width: 0%;
   height: 10px;
-  background-color: rgb(141, 22, 79);
+  background-color: rgb(21, 20, 20);
   border-radius: 10px;
   transition: all 0.3s ease;
 }
 
 .details {
   width: 100%;
+  color: black;
+  font-size: 30px;
 }
 
 form {
@@ -77,8 +80,8 @@ form {
 input {
   flex: 1;
   padding: 10px;
-  background: rgb(237, 146, 190);
-  border: 1px solid rgb(141, 22, 79);
+  background: rgb(85, 81, 83);
+  border: 2px solid rgb(14, 13, 14);
   border-radius: 10px;
   outline: none;
 }
@@ -90,7 +93,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(141, 21, 79);
+  background-color: rgb(96, 90, 94);
   color: white;
   font-size: 30px;
   font-weight: bold;
@@ -115,7 +118,7 @@ button {
 .taskItem {
   width: 500px;
   display: flex;
-  background-color: rgb(213, 123, 176);
+  background-color: rgb(85, 81, 83);
   padding: 10px;
   border-radius: 10px;
   justify-content: space-between;
@@ -133,6 +136,27 @@ button {
 .task input {
   width: 20px;
   height: 20px;
+  cursor: pointer;
+  appearance: none;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid black;
+  border-radius: 4px;
+  position: relative;
+}
+
+/* Checkbox: Yellow tick when checked */
+.task input:checked {
+  background-color: rgb(153, 131, 30);
+  border-color: rgb(139, 108, 14);
+}
+
+.task input:checked::after {
+  content: "✔";
+  position: absolute;
+  top: 0;
+  left: 3px;
+  font-size: 16px;
+  color: black; /* Black tick color */
 }
 
 .task p {
@@ -159,6 +183,6 @@ li {
 
 /* Add this rule to change the color of the text when the task is completed */
 .task.completed p {
-  color: rgb(83, 14, 14); /* or any color you prefer */
+  color: rgb(8, 8, 8); /* or any color you prefer */
   text-decoration: line-through; /* Optional: adds a strikethrough */
 }
