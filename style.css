@@ -104,15 +104,15 @@ button {
 
 /* Custom class for the trash icon */
 .trash-icon {
-  color: #8f0d0d; /* Dark pink color */
-  font-size: 30px; /* Size of the trash icon */
+  color: #8f0d0d;
+  font-size: 30px;
   cursor: pointer;
 }
 
 /* Custom class for the edit icon */
 .edit-icon {
-  color: rgb(255, 255, 255); /* White color */
-  font-size: 24px; /* Size of the edit icon */
+  color: rgb(255, 255, 255);
+  font-size: 24px;
   cursor: pointer;
 }
 
@@ -125,7 +125,7 @@ button {
   border-radius: 10px;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px; /* Adds space between tasks */
+  margin-bottom: 10px;
   margin-top: 20px;
 }
 
@@ -146,7 +146,6 @@ button {
   position: relative;
 }
 
-/* Checkbox: Yellow tick when checked */
 .task input:checked {
   background-color: rgb(153, 131, 30);
   border-color: rgb(139, 108, 14);
@@ -158,7 +157,7 @@ button {
   top: 0;
   left: 3px;
   font-size: 16px;
-  color: black; /* Black tick color */
+  color: black;
 }
 
 .task p {
@@ -174,17 +173,115 @@ button {
 /* Remove default list styles */
 ul,
 ol {
-  list-style: none; /* Remove default list styles */
-  padding: 0; /* Remove default padding */
-  margin: 0; /* Remove default margin */
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 li {
-  text-decoration: none; /* Remove text decoration */
+  text-decoration: none;
 }
 
-/* Add this rule to change the color of the text when the task is completed */
 .task.completed p {
-  color: rgb(8, 8, 8); /* or any color you prefer */
-  text-decoration: line-through; /* Optional: adds a strikethrough */
+  color: rgb(8, 8, 8);
+  text-decoration: line-through;
+}
+
+/* ===== MEDIA QUERIES FOR RESPONSIVENESS ===== */
+
+/* Mobile phones (up to 600px wide) */
+@media (max-width: 600px) {
+  .container {
+    margin-top: 100px; /* Adjust top margin for mobile */
+    width: 90%; /* Use almost full width for mobile */
+  }
+
+  .taskItem {
+    width: 100%; /* Full width for task items */
+  }
+
+  #numbers {
+    width: 80px;
+    height: 80px;
+    font-size: 24px; /* Smaller font for numbers */
+  }
+
+  .details {
+    font-size: 24px; /* Adjust font size for mobile */
+  }
+
+  input {
+    font-size: 14px; /* Smaller font for input fields */
+  }
+
+  button {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+
+  .trash-icon,
+  .edit-icon {
+    font-size: 20px;
+  }
+}
+
+/* Tablets (600px to 900px wide) */
+@media (min-width: 600px) and (max-width: 900px) {
+  .container {
+    margin-top: 150px; /* Adjust margin for tablets */
+    width: 80%; /* Adjust container width for tablets */
+  }
+
+  .taskItem {
+    width: 100%; /* Full width task items */
+  }
+
+  #numbers {
+    width: 90px;
+    height: 90px;
+    font-size: 26px;
+  }
+
+  .details {
+    font-size: 26px;
+  }
+
+  button {
+    width: 45px;
+    height: 45px;
+    font-size: 26px;
+  }
+}
+
+/* Desktops (above 900px wide) */
+@media (min-width: 900px) {
+  .container {
+    margin-top: 200px;
+    max-width: 600px; /* Slightly wider for desktop */
+  }
+
+  .taskItem {
+    width: 600px; /* Fixed width for task items on desktop */
+  }
+
+  #numbers {
+    width: 100px;
+    height: 100px;
+    font-size: 30px;
+  }
+
+  .details {
+    font-size: 30px;
+  }
+
+  button {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+  }
+  body {
+    background-image: url("StockCake-Elegant\ Writing\ Essentials_1726762084.jpg"); /* Change to the mobile background */
+    background-size: cover;
+  }
 }
