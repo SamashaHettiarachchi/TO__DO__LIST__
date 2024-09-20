@@ -225,8 +225,7 @@ li {
     font-size: 20px;
   }
   body {
-    background-image: url("sss.jpg"); /* Change to the mobile background */
+    background-image: url("sa.jpg"); /* Change to the mobile background */
     background-size: cover;
-    background-size: 100% 100%;
   }
 }
